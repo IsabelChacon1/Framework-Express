@@ -1,0 +1,25 @@
+{
+  "name": "frameworkexpress",
+  "version": "1.0.0",
+  "description": "API usando Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsabelChacon1/Framework-Express.git"
+  },
+  "keywords": [
+    "API"
+  ],
+  "author": "Maria Isabel Chacon Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsabelChacon1/Framework-Express/issues"
+  },
+  "homepage": "https://github.com/IsabelChacon1/Framework-Express#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
