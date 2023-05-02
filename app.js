@@ -10,12 +10,12 @@ app.listen(3000, function(){
     console.log('Aplicacion de ejemplo, escuchando el puerto 3000!');
 });
 
-const express = require('express');
+//const express = require('express');
 const port = 3002;
 
 const bodyParser= require('body-parser');
 const routes =require('./routes/routes')
-const app =express();
+//const app =express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
