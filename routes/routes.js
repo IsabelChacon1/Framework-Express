@@ -6,7 +6,7 @@ const routes = app =>{
     //mostrar mensaje de bienvenida de root
     app.get('/',(request, response)=>{
         response.send({
-            message:'Biencenido a Node.js Express REST API!'
+            message:'Bienvenido a Node.js Express REST API!'
         });
     });
 //Mostrar todos los usuarios
