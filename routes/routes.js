@@ -31,7 +31,7 @@ app.get('/users',(request, response)=>{
 });
 
 //Agregar un nuevo usuario 
-app.get('/users',(request, response)=>{
+app.post('/users',(request, response)=>{
     pool.query('INSERT INTO users SET ?', request.body, (error, result)=>{
         if (error) throw error;
 
@@ -40,7 +40,7 @@ app.get('/users',(request, response)=>{
 });
 
 //Actualizar un usuario existente
-app.get('/users/:id',(request, response)=>{
+app.put('/users/:id',(request, response)=>{
     const id = request.params.id;
     pool.query('UPDATE users SET ? WHERE id=?', [request.body, id], (error, result)=>{
         if (error) throw error;
@@ -50,7 +50,7 @@ app.get('/users/:id',(request, response)=>{
 });
 
 //Eliminar un usuario existente
-app.get('/users/:id',(request, response)=>{
+app.delete('/users/:id',(request, response)=>{
     const id = request.params.id;
     pool.query('DELETE FROM users WHERE id=?', id, (error, result)=>{
         if (error) throw error;
@@ -80,7 +80,7 @@ app.get('/users',(request, response)=>{
 });
 
 //Agregar un nuevo productos 
-app.get('/productos',(request, response)=>{
+app.post('/productos',(request, response)=>{
     pool.query('INSERT INTO productos SET ?', request.body, (error, result)=>{
         if (error) throw error;
 
@@ -89,7 +89,7 @@ app.get('/productos',(request, response)=>{
 });
 
 //Actualizar un usuario existente
-app.get('/productos/:id',(request, response)=>{
+app.put('/productos/:id',(request, response)=>{
     const id = request.params.id;
     pool.query('UPDATE productos SET ? WHERE id=?', [request.body, id], (error, result)=>{
         if (error) throw error;
@@ -99,7 +99,7 @@ app.get('/productos/:id',(request, response)=>{
 });
 
 //Eliminar un productos existente
-app.get('/productos/:id',(request, response)=>{
+app.delete('/productos/:id',(request, response)=>{
     const id = request.params.id;
     pool.query('DELETE FROM productos WHERE id=?', id, (error, result)=>{
         if (error) throw error;
