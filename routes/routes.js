@@ -27,6 +27,14 @@ app.get('/users',(request, response)=>{
     });
 });
 
+//Agregar un nuevo usuario 
+app.get('/users',(request, response)=>{
+    pool.query('INSERT INTO users SET ?', request.body, (error, result)=>{
+        if (error) throw error;
+
+        response.send(201).send(`User added with ID: ${result.insertId}`);
+    });
+});
 
 };
 module.exports = routes;
