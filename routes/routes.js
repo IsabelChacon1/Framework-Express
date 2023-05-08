@@ -22,8 +22,9 @@ app.get('/users',(request, response)=>{
 });
 
 //Mostrar un solo usuario por ID
-app.get('/users',(request, response)=>{
-    pool.query('SELECT * FROM users where id=?', (error, result)=>{
+app.get('/users/:id',(request, response)=>{
+    const id = request.params.id;
+    pool.query('SELECT * FROM users where id = ?', id, (error, result)=>{
         if (error) throw error;
 
         response.send(result);
@@ -71,8 +72,9 @@ app.get('/productos',(request, response)=>{
 });
 
 //Mostrar un solo productos por ID
-app.get('/users',(request, response)=>{
-    pool.query('SELECT * FROM productos where id=?', (error, result)=>{
+app.get('/productos/:id',(request, response)=>{
+    const id = request.params.id;
+    pool.query('SELECT * FROM productos where id=?',id, (error, result)=>{
         if (error) throw error;
 
         response.send(result);
